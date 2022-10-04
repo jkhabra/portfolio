@@ -1,10 +1,9 @@
 import {
-    FiBook,
-    FiFeather,
+    FiLinkedin,
     FiGithub,
-    FiInstagram,
     FiTwitter,
 } from 'react-icons/fi';
+
 import AppFooterCopyright from './AppFooterCopyright';
 
 const socialLinks = [
@@ -20,12 +19,7 @@ const socialLinks = [
     },
     {
         id: 3,
-        icon: <FiBook />,
-        url: '#',
-    },
-    {
-        id: 4,
-        icon: <FiInstagram />,
+        icon: <FiLinkedin />,
         url: '#',
     },
 ];

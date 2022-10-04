@@ -1,10 +1,11 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import { HiOutlineSun } from "react-icons/hi";
 
 import useThemeSwitcher from "../../hooks/useThemeSwitcher";
 
 const Header = () => {
     const [activeTheme, setTheme] = useThemeSwitcher();
-    const theme = activeTheme === 'dark' ? 'dark' : 'ligt';
+    const theme = activeTheme === 'dark';
 
     return (
         <>
@@ -12,10 +13,14 @@ const Header = () => {
                 <h1 className="font-burtons text-xl">JKhabra</h1>
                 <ul className="flex items-center">
                     <li>
-                        <BsFillMoonStarsFill
-                            onClick={() => setTheme(theme)}
-                            className=" cursor-pointer text-2xl"
-                        />
+                        {theme ?
+                            <BsFillMoonStarsFill
+                                onClick={() => setTheme('dark')}
+                                className=" cursor-pointer text-2xl hover:scale-95"
+                            />
+                            : <HiOutlineSun onClick={() => setTheme('light')}
+                                className=" cursor-pointer text-2xl hover:scale-95" />
+                        }
                     </li>
                     <li>
                         <a
