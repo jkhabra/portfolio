@@ -5,6 +5,23 @@ import web4 from "../../assets/images/web4.png";
 import web5 from "../../assets/images/web5.png";
 import web6 from "../../assets/images/web6.png";
 
+const projects = [web1, web2, web3, web4, web5, web6];
+
+const Tile = (p: { image: string, key: number }) => {
+    return (
+        <>
+            <div className="basis-1/3 flex-1 ">
+                <img
+                    className="rounded-lg object-cover"
+                    width={"100%"}
+                    height={"100%"}
+                    src={p.image}
+                />
+            </div>
+        </>
+    )
+}
+
 const Projects = () => {
     return (
         <>
@@ -25,54 +42,11 @@ const Projects = () => {
                     </p>
                 </div>
                 <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-                    <div className="basis-1/3 flex-1 ">
-                        <img
-                            className="rounded-lg object-cover"
-                            width={"100%"}
-                            height={"100%"}
-                            src={web1}
-                        />
-                    </div>
-                    <div className="basis-1/3 flex-1">
-                        <img
-                            className="rounded-lg object-cover"
-                            width={"100%"}
-                            height={"100%"}
-                            src={web2}
-                        />
-                    </div>
-                    <div className="basis-1/3 flex-1">
-                        <img
-                            className="rounded-lg object-cover"
-                            width={"100%"}
-                            height={"100%"}
-                            src={web3}
-                        />
-                    </div>
-                    <div className="basis-1/3 flex-1">
-                        <img
-                            className="rounded-lg object-cover"
-                            width={"100%"}
-                            height={"100%"}
-                            src={web4}
-                        />
-                    </div>
-                    <div className="basis-1/3 flex-1">
-                        <img
-                            className="rounded-lg object-cover"
-                            width={"100%"}
-                            height={"100%"}
-                            src={web5}
-                        />
-                    </div>
-                    <div className="basis-1/3 flex-1">
-                        <img
-                            className="rounded-lg object-cover"
-                            width={"100%"}
-                            height={"100%"}
-                            src={web6}
-                        />
-                    </div>
+
+                    {projects.map((img: string, index: number) =>
+                        <Tile image={img} key={index} />
+                    )}
+
                 </div>
             </section>
         </>
