@@ -8,7 +8,7 @@ const Header = () => {
 
     return (
         <>
-            <nav className="font-burtons py-10 mb-12 flex justify-between dark:text-white">
+            <nav className="font-burtons py-10 mb-12 flex justify-between text-primary-dark dark:text-primary-light">
                 <h1 className="font-burtons text-xl">JKhabra</h1>
                 <ul className="flex items-center">
                     <li>
