@@ -1,3 +1,5 @@
+import config from "../../config";
+
 function AppFooterCopyright() {
 	return (
 		<div className="font-general-regular flex justify-center items-center text-center">
@@ -15,7 +17,7 @@ function AppFooterCopyright() {
 					target="__blank"
 					className="text-dark-300 dark:text-light-300 font-medium uppercase hover:underline hover:text-indigo-600 dark:hover:text-indigo-300 ml-1 duration-500"
 				>
-					J Khabra
+					{config.appName}
 				</a>
 			</div>
 		</div>
