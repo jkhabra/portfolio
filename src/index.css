@@ -6,8 +6,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, Poppins, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, Poppins, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -24,3 +24,11 @@ a {
   src: url("./assets/fonts/Burtons.otf");
 }
 
+@layer base {
+  .pad {
+    @apply px-10 md:px-20 lg:px-40;
+  }
+  .c-bg {
+    @apply bg-light dark:bg-dark;
+  }
+}

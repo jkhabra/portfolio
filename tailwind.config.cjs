@@ -6,20 +6,20 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+    },
     extend: {
       fontFamily: {
         burtons: "burtons",
         poppins: ["Poppins", "sans-serif"],
       }, colors: {
-        // Light colors
-        'primary-light': '#F7F8FC',
-        'secondary-light': '#FFFFFF',
-        'ternary-light': '#f6f7f8',
-
-        // Dark colors
-        'primary-dark': '#0D2438',
-        'secondary-dark': '#102D44',
-        'ternary-dark': '#1E3851',
+        highlight: {DEFAULT: "#5eead4", 400: "#2dd4bf", 500: "#14b8a6", 600:"#0d9488"},
+        light: { DEFAULT: "#F7F8FC", 300: "#FFFFFF", 500: "#f6f7f8" },
+        dark: { DEFAULT: "#0D2438", 300: "#102D44", 500: "#1E3851" },
       },
     },
   },
