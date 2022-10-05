@@ -4,6 +4,7 @@ import Skills from "../Skills";
 import Projects from "../Projects";
 import AppFooter from "./footer";
 import MyBirds from "../venta";
+import UseScrollToTop from "../../hooks/useScrollToTop";
 
 const Layout = () => {
     return (
@@ -15,9 +16,10 @@ const Layout = () => {
                         <About />
                     </div>
                 </MyBirds>
-
                 <Skills />
                 <Projects />
+                <UseScrollToTop />
+
                 <AppFooter />
             </div>
         </>
