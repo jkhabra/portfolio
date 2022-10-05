@@ -1,11 +1,15 @@
-import web1 from "../../assets/images/web1.png"
-import web2 from "../../assets/images/web2.png";
-import web3 from "../../assets/images/web3.png";
-import web4 from "../../assets/images/web4.png";
 import web5 from "../../assets/images/web5.png";
 import web6 from "../../assets/images/web6.png";
 
-const projects = [web1, web2, web3, web4, web5, web6];
+import taxi from '../../assets/images/taxi.png';
+import wallfeed from '../../assets/images/wallfeed.png';
+import pharmacy from '../../assets/images/pharmacy.png';
+import musicphreak from '../../assets/images/musicphreak.png';
+import restaurant from '../../assets/images/restaurant.png';
+
+
+
+const projects = [taxi, wallfeed, pharmacy, musicphreak, web5, restaurant];
 
 const Tile = (p: { image: string, key: number }) => {
     return (
