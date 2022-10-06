@@ -11,27 +11,47 @@ interface ProjectProps {
   key?: number;
   name: string;
   img: any;
+  description: string;
 }
 
 const projects = [
-  { name: "Taki", img: taxi },
-  { name: "Wallfeed", img: wallfeed },
-  { name: "Pharmacy", img: pharmacy },
-  { name: "Musicphreak", img: musicphreak },
-  { name: "Web55", img: web5 },
-  { name: "Restaurant", img: restaurant },
+  { name: "Taki", img: taxi, description: "Some description" },
+  { name: "Wallfeed", img: wallfeed, description: "Some description" },
+  { name: "Pharmacy", img: pharmacy, description: "Some description" },
+  { name: "Musicphreak", img: musicphreak, description: "Some description" },
+  { name: "Web55", img: web5, description: "Some description" },
+  { name: "Restaurant", img: restaurant, description: "Some description" },
 ];
 
 const Tile = (p: ProjectProps) => {
   return (
     <>
       <div className="rounded-md bg-gradient-to-r from-sky-500 to-indigo-500">
-          <img
-            className=" object-center object-scale-down"
-            width={"100%"}
-            height={"100%"}
-            src={p.img}
-          />
+        <img
+          className=" object-center object-scale-down"
+          width={"100%"}
+          height={"100%"}
+          src={p.img}
+        />
+      </div>
+    </>
+  );
+};
+
+const Tile2 = (p: ProjectProps) => {
+  return (
+    <>
+      <div className="proj-imgbx">
+        <img
+          className=" object-center object-scale-down"
+          width={"100%"}
+          height={"100%"}
+          src={p.img}
+        />
+        <div className="proj-txtx text-light">
+          <h4>{p.name}</h4>
+          <span>{p.description}</span>
+        </div>
       </div>
     </>
   );
@@ -59,7 +79,12 @@ const Projects = () => {
 
         <div className="px-10 grid grid-cols-1 gap-4 xl:grid-cols-3 md:grid-cols-2">
           {projects.map((t: ProjectProps, index: number) => (
-            <Tile name={t.name} img={t.img} key={index} />
+            <Tile2
+              name={t.name}
+              img={t.img}
+              description={t.description}
+              key={index}
+            />
           ))}
         </div>
       </section>
