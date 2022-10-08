@@ -7,6 +7,8 @@ import pharmacy from "../../assets/images/pharmacy.png";
 import musicphreak from "../../assets/images/musicphreak.png";
 import restaurant from "../../assets/images/restaurant.png";
 
+import Waves from "../venta/waves";
+
 interface ProjectProps {
   key?: number;
   name: string;
@@ -15,42 +17,78 @@ interface ProjectProps {
 }
 
 const projects = [
-  { name: "Taki", img: taxi, description: "Some description" },
-  { name: "Wallfeed", img: wallfeed, description: "Some description" },
-  { name: "Pharmacy", img: pharmacy, description: "Some description" },
-  { name: "Musicphreak", img: musicphreak, description: "Some description" },
-  { name: "Web55", img: web5, description: "Some description" },
-  { name: "Restaurant", img: restaurant, description: "Some description" },
+  {
+    name: "Taxi",
+    img: taxi,
+    description:
+      "“Taxi App” was a client project i did during my full time employment.\
+        it was done on a very tight deadline under minimum supervision. \
+        It is like a clone of uber/ola.",
+  },
+  {
+    name: "Wallfeed",
+    img: wallfeed,
+    description:
+      "WallFeed is a chrome extension. In this extension users can see posts \
+       and users can suggest the post url to admin. Admin can approve/reject \
+       users suggestions and if admin approves the suggestion then post displays \
+       on the home page.",
+  },
+  {
+    name: "Pharmacy",
+    img: pharmacy,
+    description:
+      "Pharmacy App is a mobile app and built for android and ios. \
+      In this app users can book pharmacies then app finds the nearby \
+      delivery agents (around rage in 3 km). When agents accept the booking \
+      then the app holds the delivery amount. This app uses the credit score \
+      (Aduro money) as well.",
+  },
+  {
+    name: "Musicphreak",
+    img: musicphreak,
+    description:
+      "“Musicphreak” is a clone of Gaana.com. It was a my personal \
+        project i did during my free time. I had used Beautiful Soup \
+        (Python package) to scrap some music sites and store data in my \
+        db and build rest APIs in Express and ui in react.",
+  },
+  {
+    name: "SoS App",
+    img: web5,
+    description:
+      "SoS is an insolent app meant for Software Development teams to \
+       be more effective in creating good quality software. It does so \
+       by bringing transparency in your team and by aiming to save\
+       you from meetings.",
+  },
+  {
+    name: "Restaurant",
+    img: restaurant,
+    description:
+      "Resto Find is an app which users can find and book restaurants.\
+       It is Zomato clone. In this app users can add their restaurant \
+       then admin can approve/reject it. Users can login with Google, \
+       faceBook or create app account. This app provides deals \
+       and offers to users as well.",
+  },
 ];
-
-const Tile = (p: ProjectProps) => {
-  return (
-    <>
-      <div className="rounded-md bg-gradient-to-r from-sky-500 to-indigo-500">
-        <img
-          className=" object-center object-scale-down"
-          width={"100%"}
-          height={"100%"}
-          src={p.img}
-        />
-      </div>
-    </>
-  );
-};
 
 const Tile2 = (p: ProjectProps) => {
   return (
     <>
-      <div className="proj-imgbx">
-        <img
-          className=" object-center object-scale-down"
-          width={"100%"}
-          height={"100%"}
-          src={p.img}
-        />
-        <div className="proj-txtx text-light">
-          <h4>{p.name}</h4>
-          <span>{p.description}</span>
+      <div className="p-10 rounded-md border border-gray-200 dark:border-gray-800 hover:p-0">
+        <div className="proj-imgbx flex justify-center h-full w-full">
+          <img
+            className=" object-center object-scale-down"
+            width={"80%"}
+            height={"80%"}
+            src={p.img}
+          />
+          <div className="proj-txtx text-light p-3">
+            <h4>{p.name}</h4>
+            <span>{p.description}</span>
+          </div>
         </div>
       </div>
     </>
@@ -60,7 +98,7 @@ const Tile2 = (p: ProjectProps) => {
 const Projects = () => {
   return (
     <>
-      <section className="pad py-10">
+      <section className="pad py-10 min-h-auto ">
         <div>
           <h3 className="text-3xl py-1 dark:text-light ">Portofolio</h3>
           <p className="text-md py-2 leading-8 text-gray-800 dark:text-light-300">
@@ -77,7 +115,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="px-10 grid grid-cols-1 gap-4 xl:grid-cols-3 md:grid-cols-2">
+        <div className="px-10 mt-5 grid grid-cols-1 gap-4 xl:grid-cols-3 md:grid-cols-2">
           {projects.map((t: ProjectProps, index: number) => (
             <Tile2
               name={t.name}
