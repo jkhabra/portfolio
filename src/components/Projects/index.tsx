@@ -7,8 +7,6 @@ import pharmacy from "../../assets/images/pharmacy.png";
 import musicphreak from "../../assets/images/musicphreak.png";
 import restaurant from "../../assets/images/restaurant.png";
 
-import Waves from "../venta/waves";
-
 interface ProjectProps {
   key?: number;
   name: string;
